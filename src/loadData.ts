@@ -3,7 +3,6 @@ import mongoose from 'mongoose';
 import fs from 'fs';
 import path from 'path';
 import { WalletPoint } from './models';
-import csv from 'csv-parser';
 
 dotenv.config();
 
