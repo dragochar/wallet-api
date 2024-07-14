@@ -10,6 +10,7 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
+    "basic-auth": "^2.0.1",
     "csv-parse": "^5.5.6",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
