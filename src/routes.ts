@@ -17,7 +17,7 @@ router.get('/points', checkAuth, async (req, res) => {
       Date: { $gte: fromDate, $lte: toDate },
     });
 
-    const totalPoints = points.reduce((acc, point) => acc + point['Point Value'], 0);
+    const totalPoints = points.reduce((acc: number, point: any) => acc + point['Point Value'], 0);
 
     res.json({
       wallet_address,
