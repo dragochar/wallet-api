@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import fs from 'fs';
 import path from 'path';
 import { WalletPoint } from './models';
+import csv from 'csv-parser';
 
 dotenv.config();
 
@@ -16,7 +17,7 @@ async function processCSV(filePath: string) {
   return new Promise<void>((resolve, reject) => {
     const stream = fs.createReadStream(filePath)
       .pipe(csv())
-      .on('data', (data) => {
+      .on('data', (data: any) => {
         batch.push({
           Date: new Date(data.date),
           'Wallet Address': data.wallet_address,
