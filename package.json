@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node dist/app.js",
     "build": "tsc",
+    "heroku-prebuild": "npm install",
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
